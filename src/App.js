@@ -1,7 +1,8 @@
 import './App.css';
 import { Component } from 'react';
 import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import { Movies } from './components/Movies';
+import { Read } from './components/Read';
 import { Contents } from './components/Contents';
 import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,7 +30,7 @@ class App extends Component {
           <Switch>
             <Route path='/Home' exact component={Contents}></Route>
             <Route path = '/Create' exact component = {Header}></Route>
-            <Route path='/Read' exact component = {Footer}></Route>
+            <Route path='/Read' exact component = {Read}></Route>
           </Switch>
 
         </div>
