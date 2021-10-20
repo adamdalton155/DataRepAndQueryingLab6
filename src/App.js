@@ -8,6 +8,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { Create } from './components/Create';
 
 class App extends Component {
   render() {
@@ -18,7 +19,7 @@ class App extends Component {
         <div className="App">
           <Navbar bg="primary" variant="dark">
             <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar.Brand href="#home"></Navbar.Brand>
             <Nav className="navBar">
               <Nav.Link href="/Home">Home</Nav.Link>
               <Nav.Link href="/Read">Read</Nav.Link>
@@ -29,7 +30,7 @@ class App extends Component {
     
           <Switch>
             <Route path='/Home' exact component={Contents}></Route>
-            <Route path = '/Create' exact component = {Header}></Route>
+            <Route path = '/Create' exact component = {Create}></Route>
             <Route path='/Read' exact component = {Read}></Route>
           </Switch>
 
