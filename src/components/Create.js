@@ -21,6 +21,20 @@ export class Create extends React.Component {
         //Displays an dialog box that shows the user that the movie has been added to the read page
         alert(this.state.Title + ', Made in ' + this.state.Year + ' added')
         event.preventDefault();
+
+        //
+        const newMovie = {
+            Title:this.state.Title,
+            Year:this.state.Year,
+            Poster:this.state.Poster
+        }
+
+        //Use the API data on the URL http://localhost:4000/api/movies
+        axios.post('http://localhost:4000/api/movies', newMovie)
+        .then((response)=>{
+            console.log(response)
+        })
+        .catch();
     }
 
     onChangeMovieName(event) {
